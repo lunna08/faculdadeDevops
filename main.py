@@ -1,11 +1,5 @@
-from fastapi import FastAPI
+from questoes import perguntas
+from utils import executar_quiz
 
-app = FastAPI()
-
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
-@app.get("/")
-async def root():
-    return {"message": "Hello"}
+if __name__ == "__main__":
+    executar_quiz(perguntas)
